@@ -96,48 +96,6 @@
 			"response": []
 		},
 		{
-			"name": "Get Bookings with Filter",
-			"id": "550179e0-3828-492c-8c2c-b6a7b426893e",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [
-					{
-						"key": "X-API-KEY",
-						"value": "cf543f17821e4f0bbaa52f68abf8c677",
-						"type": "text"
-					},
-					{
-						"key": "X-API-ORG",
-						"value": "7785169bb020e63e9eea4a0b3d22eee5\n",
-						"type": "text"
-					}
-				],
-				"url": {
-					"raw": "https://api.eventtemple.com/v2/bookings?filter[status][eq]=lost",
-					"protocol": "https",
-					"host": [
-						"api",
-						"eventtemple",
-						"com"
-					],
-					"path": [
-						"v2",
-						"bookings"
-					],
-					"query": [
-						{
-							"key": "filter[status][eq]",
-							"value": "lost"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
 			"name": "Update Booking Name",
 			"id": "bab8f9e0-b036-4547-aca0-e55dd3b26748",
 			"protocolProfileBehavior": {
