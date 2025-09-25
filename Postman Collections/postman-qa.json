@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "d5afb4f9-77ad-4feb-9275-ac79514c5b33",
+		"name": "Event Temple Request Examples",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Bookings",
+			"id": "5e4bc40d-dd08-4531-b554-93c392efec72",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "e4ae4f92df76ae440ac680f7f41c529a",
+						"type": "text"
+					},
+					{
+						"key": "X-API-ORG",
+						"value": "7785169bb020e63e9eea4a0b3d22eee5",
+						"type": "text"
+					}
+				],
+				"url": "https://api.eventtemple.com/v2/organizations"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Events",
+			"id": "61ec44c3-a9d8-4746-b08f-7d9fa04f3d72",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "cf543f17821e4f0bbaa52f68abf8c677",
+						"type": "text"
+					},
+					{
+						"key": "X-API-ORG",
+						"value": "7785169bb020e63e9eea4a0b3d22eee5",
+						"type": "text"
+					}
+				],
+				"url": "https://api.eventtemple.com/v2/bookings"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bookings with Default Search",
+			"id": "442c08bb-1108-4008-9d41-f8ce151e450e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "cf543f17821e4f0bbaa52f68abf8c677",
+						"type": "text"
+					},
+					{
+						"key": "X-API-ORG",
+						"value": "7785169bb020e63e9eea4a0b3d22eee5\n",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.eventtemple.com/v2/bookings?filter[default_search]=testing",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eventtemple",
+						"com"
+					],
+					"path": [
+						"v2",
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "filter[default_search]",
+							"value": "testing"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Bookings with Filter",
+			"id": "550179e0-3828-492c-8c2c-b6a7b426893e",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "cf543f17821e4f0bbaa52f68abf8c677",
+						"type": "text"
+					},
+					{
+						"key": "X-API-ORG",
+						"value": "7785169bb020e63e9eea4a0b3d22eee5\n",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://api.eventtemple.com/v2/bookings?filter[status][eq]=lost",
+					"protocol": "https",
+					"host": [
+						"api",
+						"eventtemple",
+						"com"
+					],
+					"path": [
+						"v2",
+						"bookings"
+					],
+					"query": [
+						{
+							"key": "filter[status][eq]",
+							"value": "lost"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Booking Name",
+			"id": "bab8f9e0-b036-4547-aca0-e55dd3b26748",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "cf543f17821e4f0bbaa52f68abf8c677",
+						"type": "text"
+					},
+					{
+						"key": "X-API-ORG",
+						"value": "7785169bb020e63e9eea4a0b3d22eee5\n",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": {\n    \"attributes\": {\n      \"name\": \"API Updated Me! \"\n    },\n    \"type\": \"bookings\"\n  }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://api.eventtemple.com/v2/bookings/2233348"
+			},
+			"response": []
+		}
+	]
+}
