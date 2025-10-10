@@ -127,6 +127,18 @@
 				"url": "https://api.eventtemple.com/v2/bookings/2233348"
 			},
 			"response": []
+		},
+		{
+			"name": "New Request",
+			"id": "262202fd-575d-4ec6-a187-177612578407",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
 		}
 	]
 }
